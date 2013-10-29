@@ -83,6 +83,7 @@ int tinytds_err_handler(DBPROCESS *dbproc, int severity, int dberr, int oserr, c
         }
       }
       cancel = 1;
+      return_value = INT_CANCEL;
       break;
     }
     case SYBEWRIT: {
