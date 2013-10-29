@@ -77,7 +77,7 @@ int tinytds_err_handler(DBPROCESS *dbproc, int severity, int dberr, int oserr, c
     case SYBETIME: {
       if (userdata) {
         if (userdata->timing_out) {
-          return INT_TIMEOUT;
+          return_value = INT_TIMEOUT;
         } else {
           userdata->timing_out = 1;
         }
